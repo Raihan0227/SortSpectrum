@@ -14,7 +14,7 @@ This is a web-based sorting algorithm visualizer that allows users to interactiv
 
 ## Demo
 
-You can access the live demo of the sorting algorithm visualizer at [Demo Link](https://your-demo-link.com).
+You can access the live demo of the sorting algorithm visualizer at [Demo Link](https://drive.google.com/file/d/1G8btrSBZb--beCeLIrKJyxvtvqDb_iF9/view?usp=sharing).
 
 ## Technologies Used
 
