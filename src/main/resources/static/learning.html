@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SortSpectrum</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .visualization {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        #learn {
+            width: 40%;
+     
+        }
+        .swapping {
+            fill: red;
+        }
+
+        button {
+            margin: 10px;
+        }
+        
+   #shuffle-array{
+   margin-left: 217.5px;
+   }
+        
+        #steps-container {
+            width: 40%;
+            margin-left: 20px;
+        }
+
+        #steps-list {
+            list-style-type: none;
+            padding: 0;
+        } 
+    </style>
+</head>
+<body>
+
+  <label for="algorithm-select">Select Algorithm:</label>
+    <select id="algorithm-select">
+        <option value="bubble-sort">Bubble Sort</option>
+        <option value="selection-sort">Selection Sort</option>
+        <option value="insertion-sort">Insertion Sort</option>
+    </select>
+        <div>
+        <button id="home-button">Home</button>
+        <button id="sort-button">Sort</button>
+        <button id="pause-button">Pause</button>
+        <button id="refreshButton">Refresh</button>     
+    </div>
+    <div>
+        <label for="array-input">Enter comma-separated integers:</label>
+        <input type="text" id="array-input" placeholder="e.g. 50,30,20,3,40,6,80,23,90">
+        <button id="update-array">Update Array</button>
+    </div>
+    
+    <div id="shuffle-array">
+    <input type="text" id="shuffle-array-input" placeholder="Shuffled array" disabled>
+<button id="shuffle-array-button" onclick="shuffleArray()" disabled>Shuffle Array</button>
+        
+    </div>
+    <div>
+        <label for="speed-slider">Speed:</label>
+        <input type="range" id="speed-slider" min="100" max="2000" value="1000" step="100">
+    </div>
+    <div class="container">
+        <svg class="visualization"></svg>
+         <div id="learn">
+    <label for="language-select">Choose a language:</label>
+    <select id="language-select">
+        <option value="java">Java</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="python">Python</option>
+    </select>
+     <div id="instructions"></div>
+    <textarea id="code-input" rows="15" cols="55"></textarea>
+    <button id="previous-step">Previous Step</button>
+    <button id="next-step">Next Step</button>
+    <button id="show-code">Code</button>
+    <button id="run-code">Run Code</button>
+    </div>
+    </div>
+<div id="steps-container">
+            <h3>Sorting Steps:</h3>
+            <ul id="steps-list"></ul>
+        </div>
+    <script src="learning.js"></script>
+</body>
+</html>

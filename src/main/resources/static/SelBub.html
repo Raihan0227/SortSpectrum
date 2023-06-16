@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SortSpectrum</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .visualization {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+     
+        .swapping {
+            fill: red;
+        }
+
+        button {
+            margin: 10px;
+        }
+        
+        
+        #steps-container {
+            width: 40%;
+            margin-left: 20px;
+        }
+
+        #steps-list {
+            list-style-type: none;
+            padding: 0;
+        } 
+        #steps-list2 {
+            list-style-type: none;
+            padding: 0;
+        } 
+    </style>
+</head>
+<body>
+<h2>SelectionSort VS BubbleSort</h2>
+<div>
+  <button id="compare">Back</button>
+   <button id="home-button">Home</button>
+    <button id="sort-button">Sort</button>
+        <button id="pause-button">Pause</button>
+        <button id="refreshButton">Refresh</button>
+   </div>
+  <div>
+  <label for="algorithm-select">Select Algorithm:</label>
+    <select id="algorithm-select">
+        <option value="selection-sort">Selection Sort</option>
+</select>
+
+      <div class="container">
+        <svg id="visualization1" class="visualization"></svg>
+        <div id="steps-container">
+            <h3>Sorting Steps:</h3>
+            <ul id="steps-list"></ul>
+        </div>
+    </div>
+
+    </div>
+    
+   <div>
+  <label for="algorithm-select2">Select Algorithm:</label>
+  <select id="algorithm-select2">
+    <option value="bubble-sort">Bubble Sort</option>
+  </select>
+  <div class="container">
+    <svg id="visualization2" class="visualization"></svg>
+    <div id="steps-container">
+      <h3>Sorting Steps:</h3>
+      <ul id="steps-list2"></ul>
+    </div>
+  </div>
+</div>
+     
+    <script src="SelBub.js"></script>
+</body>
+</html>
